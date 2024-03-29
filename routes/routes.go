@@ -17,7 +17,7 @@ func Routes(app *fiber.App) {
 	app.Get("/users/:id", handlers.GetIdByPath)
 
 	//Update user	
-	app.Put("/users/update", handlers.UpdateUser)
+	app.Put("/users/update/:id", handlers.UpdateUser)
 
 	//Delete user
 	app.Delete("/users/delete/:id", handlers.DeleteUser)

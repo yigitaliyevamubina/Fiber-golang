@@ -47,7 +47,7 @@ func GetUsers(c *fiber.Ctx) error {
 }
 
 func UpdateUser(c *fiber.Ctx) error {
-	userId := c.Query("id")
+	userId := c.Params("id")
 
 	var user models.User
 	if err := c.BodyParser(&user); err != nil {
